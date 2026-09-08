@@ -1,0 +1,44 @@
+name: Weekly Insights draft
+
+# Runs every Monday at 13:00 UTC, and can also be triggered by hand
+# from the Actions tab using "Run workflow".
+on:
+  schedule:
+    - cron: '0 13 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate the draft post
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node scripts/generate-post.mjs
+
+      - name: Open a pull request for review
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: weekly-insights-draft
+          delete-branch: true
+          title: 'Weekly Insights draft'
+          commit-message: 'Add weekly Insights draft'
+          body: |
+            An automated draft post is ready for your review.
+
+            To publish it, read it over, make any edits on this branch,
+            then merge this pull request. Netlify will deploy it.
+
+            To skip this week, simply close this pull request.

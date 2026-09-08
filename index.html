@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morris Brako</title>
+<meta name="description" content="Morris Brako, CHE, is a hospitality educator and researcher and a PhD candidate in Hospitality Management at Iowa State University. His work focuses on inclusive food safety training in the US foodservice industry.">
+<meta property="og:title" content="Morris Brako">
+<meta property="og:description" content="Hospitality educator and researcher. Inclusive food safety training in the US foodservice industry.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F5F7F4;
+    --card: #FFFFFF;
+    --ink: #17211C;
+    --pine: #1F4E45;
+    --pine-dark: #163A34;
+    --brass: #9A7433;
+    --sage: #5E6F67;
+    --line: #DCE3DD;
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--pine); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  :focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; border-radius: 2px; }
+
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--pine); color: #fff; padding: 10px 16px; z-index: 100; }
+  .skip:focus { left: 8px; top: 8px; }
+
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 28px; }
+
+  header.top {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(245, 247, 244, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { font-family: var(--serif); font-weight: 600; font-size: 18px; color: var(--ink); background: none; border: 0; cursor: pointer; padding: 0; }
+  nav.links a { color: var(--sage); font-size: 15px; font-weight: 500; margin-left: 22px; }
+  nav.links a:hover { color: var(--pine); text-decoration: none; }
+  @media (max-width: 680px) { nav.links a:not(.nav-contact) { display: none; } }
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+  .hero { padding: 76px 0 60px; border-bottom: 1px solid var(--line); }
+  .hero-grid { display: grid; grid-template-columns: 1fr 260px; gap: 48px; align-items: center; }
+  @media (max-width: 720px) { .hero-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  .portrait {
+    width: 260px; height: 260px; object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 40px -24px rgba(23, 33, 28, 0.55);
+    justify-self: end;
+  }
+  @media (max-width: 720px) { .portrait { width: 180px; height: 180px; justify-self: start; } }
+
+  .hero .eyebrow { color: var(--brass); font-family: var(--serif); font-style: italic; font-size: 20px; margin: 0 0 12px; }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(42px, 8vw, 66px);
+    line-height: 1.03; letter-spacing: -0.015em; margin: 0 0 8px;
+  }
+  .hero .role { font-size: 18px; color: var(--pine); font-weight: 600; margin: 0 0 20px; }
+  .lede { font-size: 19px; line-height: 1.55; max-width: 36em; color: #26332C; margin: 0 0 26px; }
+
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 11px 22px; border-radius: 3px; font-weight: 500; font-size: 15.5px; cursor: pointer; }
+  .btn:hover { text-decoration: none; }
+  .btn-solid { background: var(--pine); color: #fff; border: 1px solid var(--pine); }
+  .btn-solid:hover { background: var(--pine-dark); }
+  .btn-ghost { border: 1px solid var(--pine); color: var(--pine); background: none; }
+  .btn-ghost:hover { background: rgba(31,78,69,0.06); }
+
+  section { padding: 54px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 30px; letter-spacing: -0.01em; margin: 0 0 22px; }
+  h2::before { content: ""; display: block; width: 40px; height: 3px; background: var(--brass); margin-bottom: 18px; }
+  p { margin: 0 0 18px; max-width: 44em; }
+  p:last-child { margin-bottom: 0; }
+
+  .subhead { font-family: var(--sans); font-weight: 600; font-size: 17px; color: var(--pine); margin: 30px 0 6px; }
+
+  .focus { border-top: 1px solid var(--line); padding: 16px 0; }
+  .focus:first-of-type { border-top: none; }
+  .focus h3 { font-family: var(--sans); font-size: 17px; font-weight: 600; margin: 0 0 4px; }
+  .focus p { font-size: 16px; margin: 0; color: #2C3831; }
+
+  .callout {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--pine);
+    border-radius: 0 5px 5px 0;
+    padding: 20px 22px;
+    margin: 24px 0 0;
+  }
+  .callout .k { color: var(--sage); font-size: 13.5px; margin: 0 0 4px; }
+  .callout .v { font-family: var(--serif); font-size: 19px; line-height: 1.4; margin: 0; }
+  .callout .sub { font-size: 14.5px; color: var(--sage); margin: 8px 0 0; }
+
+  .insights-intro { color: #2C3831; margin-bottom: 8px; }
+  #insights-list { margin-top: 22px; display: grid; gap: 2px; }
+  .post-card {
+    display: block; width: 100%; text-align: left;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 6px; padding: 20px 22px; cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    margin-bottom: 12px;
+  }
+  .post-card:hover { border-color: var(--pine); box-shadow: 0 12px 28px -22px rgba(23,33,28,0.6); transform: translateY(-1px); text-decoration: none; }
+  .post-card .date { color: var(--brass); font-size: 13px; font-weight: 600; letter-spacing: 0.02em; margin: 0 0 6px; }
+  .post-card h3 { font-family: var(--serif); font-size: 21px; font-weight: 600; line-height: 1.25; margin: 0 0 8px; color: var(--ink); }
+  .post-card p { font-size: 15.5px; color: var(--sage); margin: 0; }
+  .insights-empty { color: var(--sage); font-size: 15.5px; }
+
+  .row { padding: 16px 0; border-top: 1px solid var(--line); }
+  .row:first-of-type { border-top: none; }
+  .row h3 { font-family: var(--sans); font-size: 17px; font-weight: 600; margin: 0 0 3px; }
+  .row .meta { color: var(--sage); font-size: 14.5px; margin: 0 0 6px; }
+  .row p { font-size: 16px; margin: 0; color: #2C3831; }
+
+  ol.pubs { list-style: none; counter-reset: p; padding: 0; margin: 0; }
+  ol.pubs li {
+    counter-increment: p; position: relative;
+    padding: 16px 0 16px 40px; border-top: 1px solid var(--line);
+    font-size: 16px; line-height: 1.55;
+  }
+  ol.pubs li:first-child { border-top: none; }
+  ol.pubs li::before {
+    content: counter(p); position: absolute; left: 0; top: 16px;
+    font-family: var(--serif); font-size: 15px; color: var(--brass); font-weight: 600;
+  }
+  .pubs .venue { font-style: italic; }
+  .pubs .doi { font-size: 14px; }
+
+  ul.review { list-style: none; padding: 0; margin: 0; }
+  ul.review li { padding: 14px 0; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.5; }
+  ul.review li:first-child { border-top: none; }
+  ul.review .venue { color: var(--sage); font-size: 14.5px; display: block; margin-top: 3px; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 40px; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } }
+  .two-col .row { border-top: 1px solid var(--line); }
+
+  ul.creds { list-style: none; padding: 0; margin: 0; }
+  ul.creds li { padding: 13px 0; border-top: 1px solid var(--line); }
+  ul.creds li:first-child { border-top: none; }
+  ul.creds .name { font-weight: 600; }
+  ul.creds .body { color: var(--sage); font-size: 15px; }
+
+  .contact-grid { display: flex; flex-wrap: wrap; gap: 18px 44px; margin-top: 6px; }
+  .contact-grid .item .label { display: block; color: var(--sage); font-size: 13.5px; margin-bottom: 2px; }
+  .contact-grid .item a, .contact-grid .item span { font-size: 16.5px; }
+
+  footer { padding: 34px 0 52px; color: var(--sage); font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+  #post-view { padding: 40px 0 20px; }
+  .post-back { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 500; margin-bottom: 24px; background: none; border: 0; color: var(--pine); cursor: pointer; }
+  .post-back:hover { text-decoration: underline; }
+  .post-head .date { color: var(--brass); font-size: 14px; font-weight: 600; margin: 0 0 8px; }
+  .post-head h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(32px, 6vw, 46px); line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 28px; }
+  .post-body { font-size: 18px; line-height: 1.7; }
+  .post-body p { max-width: 40em; margin: 0 0 20px; }
+  .post-body h2 { font-size: 26px; margin: 34px 0 14px; }
+  .post-body h2::before { display: none; }
+  .post-body h3 { font-family: var(--serif); font-size: 21px; margin: 26px 0 10px; }
+  .post-body ul, .post-body ol { max-width: 40em; padding-left: 22px; }
+  .post-body li { margin-bottom: 8px; }
+  .post-body blockquote { border-left: 3px solid var(--brass); margin: 24px 0; padding: 4px 0 4px 20px; color: #2C3831; font-style: italic; }
+  .post-body a { text-decoration: underline; text-underline-offset: 3px; }
+  .post-body img { max-width: 100%; height: auto; border-radius: 6px; display: block; }
+  .post-body figure { margin: 28px 0; }
+  .post-body figure img { border: 1px solid var(--line); }
+  .post-body figcaption { color: var(--sage); font-size: 14.5px; margin-top: 8px; text-align: center; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <button class="brand" onclick="goHome()">Morris Brako</button>
+    <nav class="links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#insights">Insights</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact" class="nav-contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div id="profile-view">
+    <div class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Food safety, taught for everyone.</p>
+            <h1>Morris Brako</h1>
+            <p class="role">Hospitality educator and researcher, CHE</p>
+            <p class="lede">I study how food safety training can serve every worker in foodservice, including employees with disabilities, and how inclusive training improves both compliance and workforce participation.</p>
+            <div class="cta-row">
+              <a class="btn btn-solid" href="#contact">Get in touch</a>
+              <a class="btn btn-ghost" href="Brako_Morris_CV.docx">Curriculum vitae</a>
+            </div>
+          </div>
+          <img class="portrait" src="Morris_grey.png" alt="Portrait of Morris Brako">
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="reveal">
+      <div class="wrap">
+        <h2>About</h2>
+        <p>I am a hospitality educator and researcher completing my PhD in Hospitality Management at Iowa State University, where I also teach. My work sits at the intersection of food safety compliance and hospitality workforce development, grounded in more than a decade of hotel front office management and nine years of teaching hospitality operations across lodging, foodservice, and marketing.</p>
+        <p>I am a lecturer at Takoradi Technical University in Ghana and I hold the Certified Hospitality Educator credential along with ServSafe Manager and Instructor certifications.</p>
+      </div>
+    </section>
+
+    <section id="research" class="reveal">
+      <div class="wrap">
+        <h2>Research</h2>
+        <p>My research develops evidence based frameworks that connect food safety policy to practical workforce training, so that hospitality operators have inclusive strategies that improve compliance and expand who can participate in the industry. It runs along four connected lines of inquiry.</p>
+
+        <div class="focus">
+          <h3>Inclusive training for employees with disabilities</h3>
+          <p>How foodservice managers train employees with disabilities on food safety, and what equitable, accessible training looks like in practice.</p>
+        </div>
+        <div class="focus">
+          <h3>Food safety compliance in commercial foodservice</h3>
+          <p>How training materials and food safety guidance can be made clearer and more usable so they actually change behavior on the floor.</p>
+        </div>
+        <div class="focus">
+          <h3>Careers and professional identity in hospitality education</h3>
+          <p>Entrepreneurship, career development, and how students form professional identities as they enter the industry.</p>
+        </div>
+        <div class="focus">
+          <h3>Food culture and sustainability in West Africa</h3>
+          <p>Culinary heritage, food practices, and sustainable foodservice in West African contexts.</p>
+        </div>
+
+        <div class="callout">
+          <p class="k">Doctoral dissertation</p>
+          <p class="v">Assessing food safety training for individuals with disabilities in the US foodservice industry</p>
+          <p class="sub">A national mixed methods study of 315 foodservice managers, grounded in the Knowledge, Attitudes, and Practices framework. Advised by Dr. Anirudh R. Naig.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="reveal">
+      <div class="wrap">
+        <h2>Insights</h2>
+        <p class="insights-intro">Short writing on food safety, disability inclusion, and workforce practice in foodservice.</p>
+        <div id="insights-list">
+          <p class="insights-empty">Loading posts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="reveal">
+      <div class="wrap">
+        <h2>Publications</h2>
+        <p>Selected peer reviewed articles. A full record of publications and conference presentations is in my <a href="Brako_Morris_CV.docx">CV</a> and on my <a href="https://orcid.org/0000-0002-1880-3042" target="_blank" rel="noopener">ORCID profile</a>.</p>
+        <ol class="pubs">
+          <li>Brako, M., &amp; Naig, A. R. (2026). Readability of U.S. food handler training materials: A natural language processing analysis of worker study guides and the federal Food Code. <span class="venue">Frontiers in Public Health, 14</span>, 1911335. <a class="doi" href="https://doi.org/10.3389/fpubh.2026.1911335" target="_blank" rel="noopener">doi.org/10.3389/fpubh.2026.1911335</a></li>
+          <li>McArthur-Floyd, M., &amp; Brako, M. (2024). Sensory evaluation of pumpkin flour and wheat flour composite cookies: Exploring nutritional enrichment and consumer acceptance. <span class="venue">Magna Scientia Advanced Research and Reviews, 11</span>, 1&ndash;9. <a class="doi" href="https://doi.org/10.30574/msarr.2024.11.1.0070" target="_blank" rel="noopener">doi.org/10.30574/msarr.2024.11.1.0070</a></li>
+          <li>McArthur-Floyd, M., Brako, M., Kimsy, A. M., &amp; Amoah, M. (2024). Tackling food waste in culinary education: A roadmap for sustainable change. <span class="venue">International Journal of Innovative Science and Research Technology, 9</span>(4), 1370&ndash;1381. <a class="doi" href="https://doi.org/10.38124/ijisrt/IJISRT24APR1682" target="_blank" rel="noopener">doi.org/10.38124/ijisrt/IJISRT24APR1682</a></li>
+          <li>Brako, M., Bansah, F., Bosscher, E., &amp; Wilson, R. (2024). Barriers to adopting healthy eating practices among roadside automotive repair technicians in Takoradi, Ghana. <span class="venue">International Journal of Research Publication and Reviews, 5</span>, 1681&ndash;1688. <a class="doi" href="https://doi.org/10.55248/gengpi.5.0424.0945" target="_blank" rel="noopener">doi.org/10.55248/gengpi.5.0424.0945</a></li>
+          <li>Brako, M., Hagan, E., &amp; Bosscher, E. (2024). Assessment of the quality of used frying oils in selected hotels and restaurants in Sekondi-Takoradi, Ghana. <span class="venue">International Journal of Research Publication and Reviews, 5</span>, 2805&ndash;2815. <a class="doi" href="https://doi.org/10.55248/gengpi.5.0324.0744" target="_blank" rel="noopener">doi.org/10.55248/gengpi.5.0324.0744</a></li>
+          <li>Brako, M. (2024). Preserving culinary heritage: Challenges faced by Takoradi Technical University food service lab students. <span class="venue">World Journal of Advanced Research and Reviews, 21</span>, 1536&ndash;1545. <a class="doi" href="https://doi.org/10.30574/wjarr.2024.21.3.0882" target="_blank" rel="noopener">doi.org/10.30574/wjarr.2024.21.3.0882</a></li>
+          <li>Brako, M., Hagan, E., &amp; Bosscher, E. (2024). Factors influencing caterers' selection of cooking oils in Sekondi-Takoradi, Ghana. <span class="venue">International Journal of Science and Research Archive, 11</span>, 442&ndash;449. <a class="doi" href="https://doi.org/10.30574/ijsra.2024.11.2.0468" target="_blank" rel="noopener">doi.org/10.30574/ijsra.2024.11.2.0468</a></li>
+          <li>Brako, M., &amp; Hagan, E. (2024). Hospitality management students' entrepreneurial intentions and perceived challenges: A case study of Takoradi Technical University, Ghana. <span class="venue">Journal of Tourism, Hospitality and Sports, 66</span>. <a class="doi" href="https://doi.org/10.7176/JTHS/66-04" target="_blank" rel="noopener">doi.org/10.7176/JTHS/66-04</a></li>
+        </ol>
+
+        <p class="subhead">Manuscripts under review</p>
+        <ul class="review">
+          <li>Peer mediation of food safety certification in online foodservice communities. <span class="venue">Under review, British Food Journal</span></li>
+          <li>The traceability gap: Food safety transparency in delivery-only restaurants. <span class="venue">Under review, Frontiers in Public Health</span></li>
+          <li>Stigma hierarchies behind the pass: A topic modeling and sentiment analysis of disability discourse in online foodservice worker communities. <span class="venue">Under review, Journal of Hospitality and Tourism Insights</span></li>
+          <li>The sticky floor: Occupational segregation and wage penalties for foodservice workers with disabilities. <span class="venue">Under review, International Journal of Contemporary Hospitality Management</span></li>
+          <li>Constructive (dis)alignment in hospitality curricula: An importance-weighted analysis of O*NET foodservice management competencies and ACPHA accreditation outcomes. <span class="venue">Under review, Journal of Hospitality &amp; Tourism Education</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="teaching" class="reveal">
+      <div class="wrap">
+        <h2>Teaching</h2>
+        <p>I have taught across two university systems for more than a decade, bringing hotel operations experience directly into the classroom. Recent courses of record at Iowa State University include:</p>
+        <div class="row">
+          <h3>Hospitality and Apparel Marketing Strategies</h3>
+          <p class="meta">Course instructor, Iowa State University, Spring 2025</p>
+          <p>Redesigned the course around digital marketing, hospitality branding, and consumer behavior.</p>
+        </div>
+        <div class="row">
+          <h3>Lodging Operations</h3>
+          <p class="meta">Course instructor, Iowa State University, Fall 2024</p>
+          <p>Applied instruction in front office operations, reservations systems, guest services, and yield management, drawn from ten years of hotel management.</p>
+        </div>
+        <div class="row">
+          <h3>Entertainment Venue Management</h3>
+          <p class="meta">Course instructor, Iowa State University, Fall 2023</p>
+          <p>Venue operations, event logistics, and guest experience management.</p>
+        </div>
+        <div class="row">
+          <h3>Lecturer, Department of Hospitality Management</h3>
+          <p class="meta">Takoradi Technical University, Ghana, 2014 to 2023</p>
+          <p>A full portfolio of hospitality courses across lodging, foodservice, and marketing, integrating food safety and regulatory compliance throughout.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="reveal">
+      <div class="wrap">
+        <h2>Leadership and honors</h2>
+        <div class="two-col">
+          <div class="row">
+            <h3>President, Eta Sigma Delta Honor Society</h3>
+            <p class="meta">Iowa State University, 2024 to present</p>
+          </div>
+          <div class="row">
+            <h3>President, National Society for Minorities in Hospitality</h3>
+            <p class="meta">Iowa State University, 2024 to present</p>
+          </div>
+          <div class="row">
+            <h3>Principal Investigator, FSMEC Research Grant</h3>
+            <p class="meta">Best research proposal award, 2026</p>
+          </div>
+          <div class="row">
+            <h3>Preparing Future Faculty Program</h3>
+            <p class="meta">Iowa State University, 2024 to present</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credentials" class="reveal">
+      <div class="wrap">
+        <h2>Credentials</h2>
+        <ul class="creds">
+          <li><span class="name">Certified Hospitality Educator (CHE)</span><br><span class="body">American Hotel and Lodging Educational Institute</span></li>
+          <li><span class="name">ServSafe Manager</span><br><span class="body">National Restaurant Association</span></li>
+          <li><span class="name">ServSafe Instructor and Registered Examination Proctor</span><br><span class="body">National Restaurant Association, valid through 2029</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>I welcome conversations about research collaborations, teaching, and faculty opportunities.</p>
+        <div class="contact-grid">
+          <div class="item">
+            <span class="label">Email</span>
+            <a href="mailto:morris.brako@outlook.com">morris.brako@outlook.com</a>
+          </div>
+          <div class="item">
+            <span class="label">ORCID</span>
+            <a href="https://orcid.org/0000-0002-1880-3042" target="_blank" rel="noopener">0000-0002-1880-3042</a>
+          </div>
+          <div class="item">
+            <span class="label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/morris-brako-48779427b" target="_blank" rel="noopener">morris-brako</a>
+          </div>
+          <div class="item">
+            <span class="label">ResearchGate</span>
+            <a href="https://www.researchgate.net/profile/Morris-Brako" target="_blank" rel="noopener">Morris-Brako</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <article id="post-view" class="wrap" hidden>
+    <button class="post-back" onclick="goHome()">Back to profile</button>
+    <div class="post-head">
+      <p class="date" id="post-date"></p>
+      <h1 id="post-title"></h1>
+    </div>
+    <div class="post-body" id="post-content"></div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Morris Brako</span>
+    <span>Iowa State University, Ames, Iowa</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var POSTS = null;
+
+  function fmtDate(iso) {
+    try {
+      var d = new Date(iso + 'T00:00:00');
+      return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    } catch (e) { return iso; }
+  }
+
+  function loadManifest() {
+    if (POSTS) return Promise.resolve(POSTS);
+    return fetch('posts/posts.json', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('no manifest'); return r.json(); })
+      .then(function (data) {
+        POSTS = (data.posts || []).filter(function (p) { return p.status !== 'draft'; });
+        return POSTS;
+      });
+  }
+
+  function renderList() {
+    var el = document.getElementById('insights-list');
+    loadManifest().then(function (posts) {
+      if (!posts.length) { el.innerHTML = '<p class="insights-empty">First posts coming soon.</p>'; return; }
+      el.innerHTML = posts.map(function (p) {
+        return '<button class="post-card" onclick="location.hash=\'read/' + p.slug + '\'">' +
+          '<p class="date">' + fmtDate(p.date) + '</p>' +
+          '<h3>' + escapeHtml(p.title) + '</h3>' +
+          '<p>' + escapeHtml(p.summary || '') + '</p>' +
+          '</button>';
+      }).join('');
+    }).catch(function () {
+      el.innerHTML = '<p class="insights-empty">Posts will appear here once the site is published.</p>';
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function inlineMd(s) {
+    s = escapeHtml(s);
+    s = s.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, function (m, alt, src) {
+      return '<img src="' + src + '" alt="' + alt + '">';
+    });
+    s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, function (m, t, u) {
+      return '<a href="' + u + '" target="_blank" rel="noopener">' + t + '</a>';
+    });
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>');
+    s = s.replace(/_([^_]+)_/g, '<em>$1</em>');
+    return s;
+  }
+
+  function renderMarkdown(md) {
+    var blocks = md.replace(/\r\n/g, '\n').trim().split(/\n{2,}/);
+    return blocks.map(function (block) {
+      var lines = block.split('\n');
+      var h = block.match(/^(#{1,6})\s+(.*)$/);
+      if (h && lines.length === 1) {
+        var tag = h[1].length <= 2 ? 'h2' : 'h3';
+        return '<' + tag + '>' + inlineMd(h[2]) + '</' + tag + '>';
+      }
+      if (lines.every(function (l) { return /^>\s?/.test(l); })) {
+        var q = lines.map(function (l) { return l.replace(/^>\s?/, ''); }).join(' ');
+        return '<blockquote>' + inlineMd(q) + '</blockquote>';
+      }
+      if (lines.every(function (l) { return /^[-*]\s+/.test(l); })) {
+        return '<ul>' + lines.map(function (l) {
+          return '<li>' + inlineMd(l.replace(/^[-*]\s+/, '')) + '</li>';
+        }).join('') + '</ul>';
+      }
+      if (lines.every(function (l) { return /^\d+\.\s+/.test(l); })) {
+        return '<ol>' + lines.map(function (l) {
+          return '<li>' + inlineMd(l.replace(/^\d+\.\s+/, '')) + '</li>';
+        }).join('') + '</ol>';
+      }
+      var img = block.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);
+      if (img && lines.length === 1) {
+        var cap = img[1] ? '<figcaption>' + escapeHtml(img[1]) + '</figcaption>' : '';
+        return '<figure><img src="' + img[2] + '" alt="' + escapeHtml(img[1]) + '">' + cap + '</figure>';
+      }
+      return '<p>' + inlineMd(lines.join(' ')) + '</p>';
+    }).join('\n');
+  }
+
+  function stripFrontmatter(text) {
+    if (text.slice(0, 3) === '---') {
+      var end = text.indexOf('\n---', 3);
+      if (end !== -1) {
+        var after = text.indexOf('\n', end + 1);
+        return text.slice(after + 1);
+      }
+    }
+    return text;
+  }
+
+  function showPost(slug) {
+    loadManifest().then(function (posts) {
+      var post = posts.filter(function (p) { return p.slug === slug; })[0];
+      if (!post) { goHome(); return; }
+      document.getElementById('profile-view').hidden = true;
+      document.getElementById('post-view').hidden = false;
+      document.getElementById('post-date').textContent = fmtDate(post.date);
+      document.getElementById('post-title').textContent = post.title;
+      document.getElementById('post-content').innerHTML = '<p>Loading.</p>';
+      window.scrollTo(0, 0);
+      fetch(post.file, { cache: 'no-store' })
+        .then(function (r) { return r.text(); })
+        .then(function (text) {
+          var body = stripFrontmatter(text);
+          document.getElementById('post-content').innerHTML = renderMarkdown(body);
+        })
+        .catch(function () {
+          document.getElementById('post-content').innerHTML = '<p>This post could not be loaded.</p>';
+        });
+    });
+  }
+
+  function goHome() {
+    if (location.hash) { history.pushState('', document.title, location.pathname + location.search); }
+    document.getElementById('post-view').hidden = true;
+    document.getElementById('profile-view').hidden = false;
+  }
+
+  function route() {
+    var h = location.hash.replace(/^#/, '');
+    if (h.indexOf('read/') === 0) {
+      showPost(h.slice(5));
+    } else {
+      document.getElementById('post-view').hidden = true;
+      document.getElementById('profile-view').hidden = false;
+    }
+  }
+
+  window.addEventListener('hashchange', route);
+  renderList();
+  route();
+
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (n) { obs.observe(n); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (n) { n.classList.add('in'); });
+  }
+</script>
+</body>
+</html>

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "simplifying-food-safety-guidance",
+      "title": "Simplifying Food Safety Guidance for Busy Kitchens",
+      "date": "2026-09-08",
+      "summary": "Clear, actionable food safety guidance helps staff focus on safe practices rather than deciphering complex documents.",
+      "file": "posts/2026-09-08-simplifying-food-safety-guidance.md",
+      "status": "published"
+    },
+    {
       "slug": "training-that-leaves-no-one-behind",
       "title": "Training That Leaves No One Behind",
       "date": "2026-09-08",

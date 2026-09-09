@@ -165,6 +165,8 @@
     var textEl = $('#tip-text', card);
     var dateEl = $('#tip-date', card);
     var countEl = $('#tip-count', card);
+    var permalink = $('#tip-permalink', card);
+    var ordered = window.SITE_TIPS_ORDERED || tips;
     var prev = $('#tip-prev', card);
     var next = $('#tip-next', card);
     var offset = 0;
@@ -174,12 +176,14 @@
       var n = today + offset;
       var d = new Date(Date.now() + offset * DAY);
       var apply = function () {
-        textEl.textContent = tipForDay(n, tips);
+        var text = tipForDay(n, tips);
+        textEl.textContent = text;
         if (dateEl) dateEl.textContent = offset === 0 ? 'Today, ' + fmtDate(d) : fmtDate(d);
+        var num = ordered.indexOf(text) + 1;
         if (countEl) {
-          var i = ((n % tips.length) + tips.length) % tips.length;
-          countEl.textContent = 'Tip ' + (i + 1) + ' of ' + tips.length;
+          countEl.textContent = num ? 'Tip ' + num + ' of ' + ordered.length : '';
         }
+        if (permalink && num) permalink.setAttribute('href', '/tips/#tip-' + num);
         if (next) next.disabled = offset >= 0;
         if (prev) prev.disabled = offset <= -30;
       };

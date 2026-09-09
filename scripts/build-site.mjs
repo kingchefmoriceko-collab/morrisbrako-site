@@ -157,6 +157,7 @@ const FOOTER = `<footer class="site-footer">
           <li><a href="/about/">About</a></li>
           <li><a href="/research/">Research</a></li>
           <li><a href="/insights/">Insights</a></li>
+          <li><a href="/tips/">Daily tips</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
@@ -322,7 +323,7 @@ ${items}
 function sitemap(posts) {
   const urls = [
     ['/', '1.0'], ['/about/', '0.8'], ['/research/', '0.9'],
-    ['/insights/', '0.8'], ['/contact/', '0.6']
+    ['/insights/', '0.8'], ['/tips/', '0.9'], ['/contact/', '0.6']
   ].map(([u, pr]) => `  <url><loc>${SITE}${u}</loc><priority>${pr}</priority></url>`);
 
   posts.forEach((p) => urls.push(
@@ -332,6 +333,119 @@ function sitemap(posts) {
 <urlset xmlns="http://www.w3.org/schemas/sitemap/0.9">
 ${urls.join('\n')}
 </urlset>
+`;
+}
+
+/* ---------- tips page ---------- */
+
+function loadTips() {
+  const win = {};
+  new Function('window', read('assets/tips.js'))(win);
+  return { groups: win.SITE_TIP_GROUPS || [], ordered: win.SITE_TIPS_ORDERED || [] };
+}
+
+function tipsPage(groups, ordered) {
+  const total = ordered.length;
+  const url = `${SITE}/tips/`;
+
+  const jump = groups.map((g) =>
+    `        <a class="chip" href="#${g.slug}">${esc(g.name)}</a>`).join('\n');
+
+  const sections = groups.map((g) => {
+    const items = g.tips.map((t) => {
+      const n = ordered.indexOf(t) + 1;
+      return `          <li id="tip-${n}"><span class="n">${n}</span><span class="t">${esc(t)}</span>` +
+        `<a class="permalink" href="#tip-${n}" aria-label="Link to tip ${n}">#</a></li>`;
+    }).join('\n');
+    return `      <section class="reveal" id="${g.slug}">
+        <h2 class="ruled">${esc(g.name)}</h2>
+        <p>${esc(g.blurb || '')}</p>
+        <ol class="tip-index">
+${items}
+        </ol>
+      </section>`;
+  }).join('\n');
+
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Inclusive food safety training tips',
+    description: `A working list of ${total} practical ideas for training employees with disabilities on food safety in foodservice.`,
+    url,
+    numberOfItems: total,
+    itemListElement: ordered.map((t, i) => ({
+      '@type': 'ListItem', position: i + 1, name: t, url: `${url}#tip-${i + 1}`
+    }))
+  };
+
+  return `<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inclusive food safety training tips, Morris Brako</title>
+<meta name="description" content="A working list of ${total} practical, one sentence ideas for training employees with disabilities on food safety in foodservice, grouped by theme.">
+<link rel="canonical" href="${url}">
+<meta property="og:site_name" content="Morris Brako">
+<meta property="og:title" content="Inclusive food safety training tips">
+<meta property="og:description" content="${total} practical ideas for training employees with disabilities on food safety in foodservice.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${SITE}/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Morris Brako, Insights" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('mb-theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);document.documentElement.classList.add('js');}catch(e){}})();</script>
+<script type="application/ld+json">
+${JSON.stringify(ld)}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+${header('/insights/')}
+
+<main id="main">
+
+  <div class="page-hero">
+    <div class="wrap">
+      <p class="kicker">Daily tips</p>
+      <h1>Inclusive food safety training tips</h1>
+      <p class="lede">A working list of ${total} practical ideas for training employees with disabilities on food safety in foodservice. One appears on the <a href="/">home page</a> each day. All of them are here, grouped by theme.</p>
+    </div>
+  </div>
+
+  <section class="reveal">
+    <div class="wrap">
+      <p>These come out of my research and teaching on food safety training, and they share one assumption. Most training is designed for an imagined average worker, and the people who fall outside that average are the ones who fall through. Nearly every idea below makes the training clearer for everyone on the line, not only for the employee it was written for. Take what fits your operation and ignore the rest.</p>
+      <div class="filters tip-jump">
+${jump}
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap tip-sections">
+${sections}
+  </div>
+
+  <section class="section-alt reveal">
+    <div class="wrap">
+      <h2 class="ruled">Using these</h2>
+      <p>You are welcome to use these in your own training, briefings, or teaching. If you do, a link back to this page is appreciated but not required. If you disagree with one, or your operation has taught you something these miss, I would like to hear it, because the list gets better that way.</p>
+      <div class="cta-row" style="margin-top:24px">
+        <a class="btn btn-solid" href="/contact/">Send me a note</a>
+        <a class="btn btn-ghost" href="/insights/">Longer writing on this</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+${FOOTER}
 `;
 }
 
@@ -364,6 +478,14 @@ inject('insights/index.html', built.length
 inject('index.html', built.length
   ? built.slice(0, 3).map(({ post, mins }) => card(post, mins)).join('\n')
   : '        <p class="empty">First posts coming soon.</p>');
+
+const { groups, ordered } = loadTips();
+if (ordered.length) {
+  write('tips/index.html', tipsPage(groups, ordered));
+  console.log(`  /tips/  (${ordered.length} tips in ${groups.length} themes)`);
+} else {
+  console.warn('  ! no tips found in assets/tips.js, skipped /tips/');
+}
 
 write('feed.xml', rss(posts));
 write('sitemap.xml', sitemap(posts));

@@ -372,3 +372,15 @@
     init();
   }
 })();
+/* Cloudflare Web Analytics. Cookieless, so no consent banner is required.
+   Loaded from this shared file so every page is covered, including the
+   generated tips and post pages. Skipped anywhere other than the live domain,
+   so local previews and Netlify deploy previews do not distort the numbers. */
+(function () {
+  if (location.hostname !== 'morrisbrako.com') return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "501d2b1ee8a045ce88a3049958ad0dc1"}');
+  document.head.appendChild(s);
+})();

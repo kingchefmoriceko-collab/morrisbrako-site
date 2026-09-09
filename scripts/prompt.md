@@ -21,6 +21,8 @@ FORMAT
 VOICE AND RULES
 - Reflective and opinion driven is welcome. Framing and argument, not a literature review.
 - Do not invent statistics, study findings, citations, or quotes. If a claim would need a source, keep it general or frame it as the author's view.
+- Do not invent personal experiences, anecdotes, classroom moments, conversations, or things the author has supposedly tried, seen, or built. Write from argument and principle instead. A line such as when I walk into a kitchen, or I have begun experimenting with, is an invention unless the author wrote it, so avoid first person narrative and use the first person only for opinions and positions.
+- Use plain hyphens and plain apostrophes only. No non breaking hyphens or other unusual characters.
 - Do not use em dashes anywhere. Use commas or separate sentences.
 - Do not use contractions in a way that feels sloppy; keep it professional.
 - The dissertation is still in progress, so do not present unpublished findings as settled results.

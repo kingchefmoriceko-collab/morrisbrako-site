@@ -330,7 +330,7 @@ function sitemap(posts) {
     `  <url><loc>${SITE}/insights/${p.slug}/</loc><lastmod>${p.date}</lastmod><priority>0.7</priority></url>`));
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.w3.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.join('\n')}
 </urlset>
 `;

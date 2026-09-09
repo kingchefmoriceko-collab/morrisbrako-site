@@ -1,7 +1,8 @@
 // Generates one draft Insights post using the Groq API (OpenAI-compatible).
 // Groq has a free tier and is the same provider the job_hunter bot uses.
 // Writes a new markdown file in posts/ and prepends an entry to posts/posts.json.
-// The GitHub Action opens a pull request with these changes for review.
+// The GitHub Action then runs scripts/build-site.mjs and opens a pull request
+// with these changes for review.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -21,7 +22,7 @@ if (!API_KEY) {
 }
 
 function noEmDash(s) {
-  return String(s).replace(/\s*[\u2014\u2013]\s*/g, ', ');
+  return String(s).replace(/\s*[—–]\s*/g, ', ');
 }
 
 function slugify(s) {
@@ -78,11 +79,20 @@ const date = new Date().toISOString().slice(0, 10);
 const title = noEmDash(post.title || 'Untitled').trim();
 const summary = noEmDash(post.summary || '').trim();
 const body = noEmDash(post.body_markdown || '').trim();
-const slug = slugify(post.slug || title);
+let slug = slugify(post.slug || title);
 
 if (!slug || !body) {
   console.error('Model output was missing a slug or body.');
   process.exit(1);
+}
+
+// Each post becomes its own page at /insights/<slug>/, so slugs have to be unique.
+const taken = new Set((manifest.posts || []).map((p) => p.slug));
+if (taken.has(slug)) {
+  let n = 2;
+  while (taken.has(`${slug}-${n}`)) n += 1;
+  console.log(`Slug "${slug}" was already used, using "${slug}-${n}" instead.`);
+  slug = `${slug}-${n}`;
 }
 
 const filename = `${date}-${slug}.md`;

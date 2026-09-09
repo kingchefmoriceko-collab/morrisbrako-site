@@ -23,6 +23,7 @@ VOICE AND RULES
 - Do not invent statistics, study findings, citations, or quotes. If a claim would need a source, keep it general or frame it as the author's view.
 - Do not use em dashes anywhere. Use commas or separate sentences.
 - Do not use contractions in a way that feels sloppy; keep it professional.
+- The dissertation is still in progress, so do not present unpublished findings as settled results.
 - Avoid repeating the angle of recent posts, which are listed at generation time.
 
 OUTPUT

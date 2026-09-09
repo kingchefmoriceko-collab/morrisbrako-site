@@ -1,0 +1,8 @@
+# Full size source images. The optimized versions the site actually uses
+# live in images/ and are committed. Keeping these out keeps the repository small.
+ChatGPT Image*.png
+Morris_grey.png
+
+# Local tooling
+node_modules/
+.DS_Store

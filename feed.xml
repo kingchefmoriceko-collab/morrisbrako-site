@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Morris Brako, Insights</title>
+  <link>https://morrisbrako.com/insights/</link>
+  <atom:link href="https://morrisbrako.com/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Short writing on food safety, disability inclusion, and workforce practice in foodservice.</description>
+  <language>en-us</language>
+  <lastBuildDate>Wed, 09 Sep 2026 00:18:13 GMT</lastBuildDate>
+  <item>
+    <title>Training That Leaves No One Behind</title>
+    <link>https://morrisbrako.com/insights/training-that-leaves-no-one-behind/</link>
+    <guid isPermaLink="true">https://morrisbrako.com/insights/training-that-leaves-no-one-behind/</guid>
+    <pubDate>Tue, 08 Sep 2026 12:00:00 GMT</pubDate>
+    <description>Why food safety training has to be designed for every worker on the line, not just the average one.</description>
+  </item>
+</channel>
+</rss>

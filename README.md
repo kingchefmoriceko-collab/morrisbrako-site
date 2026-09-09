@@ -1,53 +1,97 @@
 # Morris Brako, personal site
 
-A static personal and academic site, plus a weekly Insights pipeline that drafts a
-post for review.
+A static personal and academic site for morrisbrako.com, plus a weekly Insights
+pipeline that drafts a post for review and a daily inclusive training tip.
 
-## Files
+## Pages
 
-- `index.html` is the whole site. It reads posts from `posts/posts.json`.
-- `Morris_grey.png` is the portrait, `Brako_Morris_CV.docx` is the linked CV.
+| Page | File | URL |
+| --- | --- | --- |
+| Home | `index.html` | `/` |
+| About | `about/index.html` | `/about/` |
+| Research and publications | `research/index.html` | `/research/` |
+| Insights list | `insights/index.html` | `/insights/` |
+| Contact | `contact/index.html` | `/contact/` |
+| Not found | `404.html` | any bad address |
+
+Each post also gets its own real page, generated at `insights/<slug>/index.html`.
+
+## Supporting files
+
+- `assets/site.css` is the whole design system, including the dark theme.
+- `assets/site.js` is the shared behaviour: theme toggle, mobile menu, tip of the day, contact form.
+- `assets/tips.js` is the tip bank. One sentence per line. Edit it freely.
 - `posts/` holds the post manifest and one markdown file per post.
-- `scripts/generate-post.mjs` drafts a post using the Anthropic API.
+- `scripts/build-site.mjs` turns the markdown into pages, and writes the feed and sitemap.
+- `scripts/generate-post.mjs` drafts a post using the Groq API.
 - `scripts/prompt.md` is the editorial brief. Edit it to steer topics and voice.
-- `.github/workflows/weekly-draft.yml` runs the drafter weekly and opens a pull request.
+- `images/` holds the portrait, the link preview image, and post illustrations.
 
-## Publish the site
+## The daily tip
 
-1. Create a free account at github.com and make a new repository.
-2. Upload every file and folder here to that repository, keeping the structure.
-3. Create a free account at netlify.com and choose "Import from Git".
-4. Pick the repository. No build command is needed. Set the publish directory to the
-   repository root. Deploy.
-5. In Netlify, add your custom domain `morrisbrako.com` under Domain settings, then
-   set the DNS records it gives you at Porkbun. Ask Claude for the exact records.
+`assets/tips.js` contains a list of one sentence tips. The site shows one per
+calendar day, working through the list in order and starting over at the end,
+so it changes on its own with no work from you. The full list is at
+`/insights/#tips`.
 
-After this, any change merged into the main branch publishes automatically.
+To add a tip, put another quoted line in the list. To change one, edit it in
+place. The list can be any length, and nothing else needs to be updated.
 
-## Turn on the weekly drafts
+## Editing content
 
-1. Get a free Groq API key at console.groq.com, or reuse the one already in
-   the job_hunter config. Groq has a free tier, so this costs nothing.
+The five main pages are ordinary HTML, so you can open one and edit the words
+directly. The header and footer are repeated in each file, so if you rename a
+navigation item, change it in all of them.
+
+## Adding a post by hand
+
+1. Add a markdown file to `posts/` using the same frontmatter shape as the existing one.
+2. Add an entry at the top of the `posts` list in `posts/posts.json`.
+3. Run `node scripts/build-site.mjs`.
+4. Commit and push.
+
+## Previewing locally
+
+Because the site uses real page addresses, opening `index.html` by double
+clicking will not work properly. Start a small local server instead, from
+inside this folder:
+
+```
+npx serve .
+```
+
+Then open the address it prints, usually `http://localhost:3000`.
+
+## The contact form
+
+The form on `/contact/` uses Netlify Forms, which is included on the free plan.
+Netlify detects the form automatically on deploy. To get the messages:
+
+1. In Netlify, open the site, then Forms.
+2. Select the `contact` form, then Settings and notifications.
+3. Add an email notification pointing at the address you want the messages sent to.
+
+Submissions also stay visible in the Netlify dashboard. The form falls back to
+showing your email address if a submission ever fails.
+
+## The weekly drafts
+
+1. Get a free Groq API key at console.groq.com, or reuse the one in the job_hunter config.
 2. In the GitHub repository, go to Settings, then Secrets and variables, then Actions.
    Add a secret named `GROQ_API_KEY` with your key as the value.
 3. In Settings, then Actions, then General, under "Workflow permissions", enable
    "Allow GitHub Actions to create and approve pull requests".
-4. That is it. Every Monday the workflow drafts a post and opens a pull request.
 
-## How the weekly flow works
+Every Monday the workflow drafts a post, rebuilds the pages, and opens a pull
+request. You read the draft, edit it if needed, and merge to publish, or close
+to skip. Nothing is ever published without your merge.
 
-1. The workflow drafts a post and opens a pull request. Nothing is public yet.
-2. You read the draft, edit it if needed, and merge to publish, or close to skip.
-3. Merging triggers a Netlify deploy and the post goes live.
+To change the schedule, edit the `cron` line in `.github/workflows/weekly-draft.yml`.
+The format is minute hour day-of-month month day-of-week, in UTC. `0 13 * * 1`
+is Mondays at 13:00 UTC.
 
-Nothing is ever published without your merge. That review step is intentional.
+## Deployment
 
-## Change the schedule
-
-Edit the `cron` line in `.github/workflows/weekly-draft.yml`. The format is
-minute hour day-of-month month day-of-week, in UTC. `0 13 * * 1` is Mondays at 13:00 UTC.
-
-## Add a post by hand
-
-Add a markdown file to `posts/` with the same frontmatter shape as the existing one,
-then add an entry at the top of the `posts` list in `posts/posts.json`. Commit and merge.
+Netlify builds from the `main` branch of this repository with no build command
+and the repository root as the publish directory. Any change merged into `main`
+deploys automatically. `netlify.toml` holds the caching and security headers.

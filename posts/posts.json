@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "slug": "clear-food-safety-guidance-for-busy-kitchens",
+      "title": "Clear Food Safety Guidance for Busy Kitchens",
+      "date": "2026-09-21",
+      "summary": "I argue that simplifying food safety instructions makes compliance more realistic for frontline staff.",
+      "file": "posts/2026-09-21-clear-food-safety-guidance-for-busy-kitchens.md",
+      "status": "published"
+    },
+    {
       "slug": "training-that-leaves-no-one-behind",
       "title": "Training That Leaves No One Behind",
       "date": "2026-09-08",

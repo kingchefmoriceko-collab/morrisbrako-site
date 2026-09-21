@@ -1,0 +1,35 @@
+name: Publish held Insights posts
+
+# Releases any automated post that has waited 24 hours and was not closed.
+# Runs daily and can be triggered by hand.
+on:
+  schedule:
+    - cron: '0 15 * * *'   # daily, 15:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release auto-post pull requests older than 24 hours
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          cutoff=$(date -u -d '24 hours ago' +%s)
+          gh pr list --repo "$REPO" --state open --label auto-post \
+            --json number,createdAt,labels,title \
+            --jq '.[] | select([.labels[].name] | index("hold") | not) | [.number, .createdAt, .title] | @tsv' \
+          | while IFS=$'\t' read -r number created title; do
+              created_ts=$(date -u -d "$created" +%s)
+              if [ "$created_ts" -le "$cutoff" ]; then
+                echo "Releasing #$number: $title"
+                gh pr merge "$number" --repo "$REPO" --squash --delete-branch
+              else
+                echo "Holding #$number: $title (less than 24h old)"
+              fi
+            done

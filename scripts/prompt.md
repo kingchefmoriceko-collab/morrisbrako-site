@@ -28,5 +28,11 @@ VOICE AND RULES
 - The dissertation is still in progress, so do not present unpublished findings as settled results.
 - Avoid repeating the angle of recent posts, which are listed at generation time.
 
+THEME FOR THE HEADER IMAGE
+Also pick the single closest theme from this list, which the site uses to choose a header illustration: inclusion, clarity, temperature, hygiene, workforce, culture. Use inclusion for pieces on disability inclusion, clarity for readability and plain guidance, temperature for temperature control, hygiene for handwashing and sanitation, workforce for staffing, careers, and teaching, and culture for food culture and sustainability.
+
+CADENCE NOTE
+A new post is drafted every two days, so vary the angle sharply from the recent titles listed at generation time. When in doubt, go narrower and more specific rather than repeating a general theme.
+
 OUTPUT
-Return only a JSON object with keys: title, slug, summary, body_markdown. No other text.
+Return only a JSON object with keys: title, slug, summary, body_markdown, theme. No other text.

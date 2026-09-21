@@ -6,3 +6,7 @@ Morris_grey.png
 # Local tooling
 node_modules/
 .DS_Store
+
+# Stray binaries that landed in the folder; never part of the site
+*.exe
+*.winmd

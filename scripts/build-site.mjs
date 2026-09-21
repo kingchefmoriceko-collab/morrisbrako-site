@@ -273,11 +273,17 @@ ${FOOTER}
 /* ---------- cards and injection ---------- */
 
 function card(post, mins) {
-  return `        <a class="post-card" href="/insights/${post.slug}/">
-          <p class="post-meta"><span>${fmtDate(post.date)}</span><span class="sep">/</span><span class="read">${mins} minute read</span></p>
-          <h3>${esc(post.title)}</h3>
-          <p>${esc(post.summary || '')}</p>
+  const thumb = post.image
+    ? `<span class="post-thumb"><img src="/${post.image}" alt="" loading="lazy" width="200" height="120"></span>`
+    : '';
+  return `        <a class="post-card${post.image ? ' has-thumb' : ''}" href="/insights/${post.slug}/">
+          ${thumb}
+          <span class="post-body-col">
+          <span class="post-meta"><span>${fmtDate(post.date)}</span><span class="sep">/</span><span class="read">${mins} minute read</span></span>
+          <span class="post-card-h3">${esc(post.title)}</span>
+          <span class="post-card-sum">${esc(post.summary || '')}</span>
           <span class="go">Read the post</span>
+          </span>
         </a>`;
 }
 

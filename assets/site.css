@@ -501,14 +501,26 @@ figure.photo figcaption {
 }
 .post-meta .sep { color: var(--line); }
 .post-meta .read { color: var(--muted); font-weight: 500; letter-spacing: 0; }
-.post-card h3 {
+.post-card-h3 {
+  display: block;
   font-family: var(--serif); font-size: 22px; font-weight: 600;
   line-height: 1.26; margin: 0 0 9px; color: var(--ink);
 }
-.post-card p { font-size: 15.5px; color: var(--muted); margin: 0; max-width: 46em; }
+.post-card-sum { display: block; font-size: 15.5px; color: var(--muted); margin: 0; max-width: 46em; }
 .post-card .go { display: inline-block; margin-top: 14px; color: var(--accent); font-size: 14.5px; font-weight: 500; }
 .post-card .go::after { content: " \2192"; transition: margin-left 0.2s var(--ease); }
 .post-card:hover .go::after { margin-left: 4px; }
+
+/* Cards with a header thumbnail: image left, text right; stacks on mobile. */
+.post-card.has-thumb { display: grid; grid-template-columns: 210px 1fr; gap: 0; padding: 0; overflow: hidden; }
+.post-card.has-thumb .post-thumb { display: block; background: var(--bg-alt); }
+.post-card.has-thumb .post-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.post-card.has-thumb .post-body-col { display: block; padding: 22px 26px; }
+.post-card .post-body-col { display: block; }
+@media (max-width: 640px) {
+  .post-card.has-thumb { grid-template-columns: 1fr; }
+  .post-card.has-thumb .post-thumb img { height: 160px; }
+}
 .empty { color: var(--muted); font-size: 15.5px; }
 
 /* ---------- Publications ---------- */

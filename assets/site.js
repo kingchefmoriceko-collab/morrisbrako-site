@@ -287,18 +287,19 @@
       if (status) { status.className = 'form-status'; status.textContent = ''; }
 
       var data = new FormData(form);
-      var body = new URLSearchParams();
-      data.forEach(function (v, k) { body.append(k, v); });
+      var json = {};
+      data.forEach(function (v, k) { json[k] = v; });
 
       var original = submit ? submit.textContent : '';
       if (submit) { submit.disabled = true; submit.textContent = 'Sending'; }
 
-      fetch(form.getAttribute('action') || '/', {
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body.toString()
-      }).then(function (r) {
-        if (!r.ok) throw new Error('bad status');
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(json)
+      }).then(function (r) { return r.json(); })
+      .then(function (result) {
+        if (!result.success) throw new Error(result.message || 'submission failed');
         form.reset();
         if (status) {
           status.className = 'form-status ok';
@@ -375,7 +376,7 @@
 /* Cloudflare Web Analytics. Cookieless, so no consent banner is required.
    Loaded from this shared file so every page is covered, including the
    generated tips and post pages. Skipped anywhere other than the live domain,
-   so local previews and Netlify deploy previews do not distort the numbers. */
+   so local previews do not distort the numbers. */
 (function () {
   if (location.hostname !== 'morrisbrako.com') return;
   var s = document.createElement('script');

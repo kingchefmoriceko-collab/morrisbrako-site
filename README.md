@@ -64,34 +64,30 @@ Then open the address it prints, usually `http://localhost:3000`.
 
 ## The contact form
 
-The form on `/contact/` uses Netlify Forms, which is included on the free plan.
-Netlify detects the form automatically on deploy. To get the messages:
+The form on `/contact/` uses Web3Forms, a free form to email service. Messages
+are sent straight to the email address tied to the access key. The form falls
+back to showing your email address if a submission ever fails.
 
-1. In Netlify, open the site, then Forms.
-2. Select the `contact` form, then Settings and notifications.
-3. Add an email notification pointing at the address you want the messages sent to.
+To change the receiving email, generate a new access key at web3forms.com and
+replace the value in `contact/index.html`.
 
-Submissions also stay visible in the Netlify dashboard. The form falls back to
-showing your email address if a submission ever fails.
+## The automated drafts
 
-## The weekly drafts
-
-1. Get a free Groq API key at console.groq.com, or reuse the one in the job_hunter config.
+1. Get a free Groq API key at console.groq.com.
 2. In the GitHub repository, go to Settings, then Secrets and variables, then Actions.
    Add a secret named `GROQ_API_KEY` with your key as the value.
 3. In Settings, then Actions, then General, under "Workflow permissions", enable
    "Allow GitHub Actions to create and approve pull requests".
 
-Every Monday the workflow drafts a post, rebuilds the pages, and opens a pull
-request. You read the draft, edit it if needed, and merge to publish, or close
-to skip. Nothing is ever published without your merge.
+Every two days the workflow drafts a post, rebuilds the pages, and opens a pull
+request. The post publishes automatically after 24 hours unless you close the
+PR or add the "hold" label. To publish immediately, merge the PR.
 
-To change the schedule, edit the `cron` line in `.github/workflows/weekly-draft.yml`.
-The format is minute hour day-of-month month day-of-week, in UTC. `0 13 * * 1`
-is Mondays at 13:00 UTC.
+To change the schedule, edit the `cron` line in `.github/workflows/auto-draft.yml`.
+The format is minute hour day-of-month month day-of-week, in UTC.
 
 ## Deployment
 
-Netlify builds from the `main` branch of this repository with no build command
-and the repository root as the publish directory. Any change merged into `main`
-deploys automatically. `netlify.toml` holds the caching and security headers.
+The site is hosted on GitHub Pages and deploys automatically when changes are
+pushed to the `main` branch. The workflow at `.github/workflows/deploy-pages.yml`
+handles the deployment. The custom domain is set in the `CNAME` file.

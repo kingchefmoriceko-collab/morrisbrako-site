@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "sustainable-food-culture-hospitality-education",
+      "title": "Sustainable Food Culture in Hospitality Education",
+      "date": "2026-09-25",
+      "summary": "I argue that embedding West African food traditions into hospitality curricula can deepen sustainability awareness while enriching student learning.",
+      "file": "posts/2026-09-25-sustainable-food-culture-hospitality-education.md",
+      "image": "images/headers/culture.svg",
+      "status": "published"
+    },
+    {
       "slug": "clear-food-safety-guidance-for-busy-kitchens",
       "title": "Clear Food Safety Guidance for Busy Kitchens",
       "date": "2026-09-21",

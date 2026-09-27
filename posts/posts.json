@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "visual-cues-food-safety-blind-staff",
+      "title": "Visual Cues for Food Safety Accessible to Blind Staff",
+      "date": "2026-09-27",
+      "summary": "I argue that tactile and auditory signals can make food safety standards reachable for blind kitchen workers.",
+      "file": "posts/2026-09-27-visual-cues-food-safety-blind-staff.md",
+      "image": "images/headers/inclusion.svg",
+      "status": "published"
+    },
+    {
       "slug": "sustainable-food-culture-hospitality-education",
       "title": "Sustainable Food Culture in Hospitality Education",
       "date": "2026-09-25",

@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "building-reliable-staffing-pipeline-midlevel-kitchen-roles",
+      "title": "Building a Reliable Staffing Pipeline for Midlevel Kitchen Roles",
+      "date": "2026-09-29",
+      "summary": "A focused approach to developing a steady flow of qualified midlevel kitchen staff can improve service consistency and reduce turnover.",
+      "file": "posts/2026-09-29-building-reliable-staffing-pipeline-midlevel-kitchen-roles.md",
+      "image": "images/headers/workforce.svg",
+      "status": "published"
+    },
+    {
       "slug": "visual-cues-food-safety-blind-staff",
       "title": "Visual Cues for Food Safety Accessible to Blind Staff",
       "date": "2026-09-27",

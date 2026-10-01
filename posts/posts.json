@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "neurodiversity-food-safety-training",
+      "title": "Neurodiversity and Food Safety Training",
+      "date": "2026-10-01",
+      "summary": "Inclusive food safety training must be designed to support neurodiverse employees through clear structure, flexible delivery, and supportive environments.",
+      "file": "posts/2026-10-01-neurodiversity-food-safety-training.md",
+      "image": "images/headers/inclusion.svg",
+      "status": "published"
+    },
+    {
       "slug": "building-reliable-staffing-pipeline-midlevel-kitchen-roles",
       "title": "Building a Reliable Staffing Pipeline for Midlevel Kitchen Roles",
       "date": "2026-09-29",

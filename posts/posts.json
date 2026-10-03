@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "micro-credentials-entry-level-skills",
+      "title": "Micro-Credentials Boost Entry Level Foodservice Skills",
+      "date": "2026-10-03",
+      "summary": "Modular micro-credentials can accelerate skill development for new foodservice workers while aligning training with industry needs.",
+      "file": "posts/2026-10-03-micro-credentials-entry-level-skills.md",
+      "image": "images/headers/workforce.svg",
+      "status": "published"
+    },
+    {
       "slug": "neurodiversity-food-safety-training",
       "title": "Neurodiversity and Food Safety Training",
       "date": "2026-10-01",

@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "simplifying-temperature-controls",
+      "title": "Simplifying Temperature Controls in Small Kitchens",
+      "date": "2026-10-05",
+      "summary": "Clear, concise temperature protocols help small foodservice operations maintain safety without unnecessary complexity.",
+      "file": "posts/2026-10-05-simplifying-temperature-controls.md",
+      "image": "images/headers/temperature.svg",
+      "status": "published"
+    },
+    {
       "slug": "micro-credentials-entry-level-skills",
       "title": "Micro-Credentials Boost Entry Level Foodservice Skills",
       "date": "2026-10-03",

@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "defining-my-role-as-a-hospitality-educator",
+      "title": "Defining My Role as a Hospitality Educator",
+      "date": "2026-10-07",
+      "summary": "I argue that a clear professional identity strengthens teaching, research, and industry engagement in hospitality education.",
+      "file": "posts/2026-10-07-defining-my-role-as-a-hospitality-educator.md",
+      "image": "images/headers/workforce.svg",
+      "status": "published"
+    },
+    {
       "slug": "simplifying-temperature-controls",
       "title": "Simplifying Temperature Controls in Small Kitchens",
       "date": "2026-10-05",

@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "embedding-soft-skills-foodservice-training",
+      "title": "Embedding Soft Skills in Foodservice Training",
+      "date": "2026-10-09",
+      "summary": "I argue that incorporating soft-skill development into foodservice training improves employee performance and guest satisfaction.",
+      "file": "posts/2026-10-09-embedding-soft-skills-foodservice-training.md",
+      "image": "images/headers/workforce.svg",
+      "status": "published"
+    },
+    {
       "slug": "defining-my-role-as-a-hospitality-educator",
       "title": "Defining My Role as a Hospitality Educator",
       "date": "2026-10-07",

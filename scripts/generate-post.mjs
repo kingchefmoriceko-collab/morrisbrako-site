@@ -31,7 +31,9 @@ const THEME_IMAGES = {
   workforce:   'images/headers/workforce.svg',
   culture:     'images/headers/culture.svg'
 };
-const THEMES = Object.keys(THEME_IMAGES);
+// culture is kept as an image but excluded from rotation: posts now center on
+// disability training and inclusion, which the other five themes cover.
+const THEMES = Object.keys(THEME_IMAGES).filter((t) => t !== 'culture');
 
 // Normalise characters that read as em dashes or render oddly, per Morris's
 // style rules: no em or en dashes, no non-breaking hyphens, plain spaces.

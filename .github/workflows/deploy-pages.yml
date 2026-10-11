@@ -3,6 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # Pushes made by the auto-writer use GitHub's built-in token, and GitHub
+  # never lets those pushes start other workflows. So also deploy whenever
+  # the auto-writer finishes successfully.
+  workflow_run:
+    workflows: ["Auto draft an Insights post"]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
@@ -16,12 +22,15 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

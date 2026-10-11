@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "captioned-video-modules-allergen-safety",
+      "title": "Captioned Video Modules for Allergen Safety Training",
+      "date": "2026-10-11",
+      "summary": "Captioned video instruction can make allergen safety training more accessible for hearing-impaired foodservice employees.",
+      "file": "posts/2026-10-11-captioned-video-modules-allergen-safety.md",
+      "image": "images/headers/inclusion.svg",
+      "status": "published"
+    },
+    {
       "slug": "embedding-soft-skills-foodservice-training",
       "title": "Embedding Soft Skills in Foodservice Training",
       "date": "2026-10-09",

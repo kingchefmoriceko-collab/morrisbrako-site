@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "visual-checklists-deaf-personal-hygiene",
+      "title": "Visual Checklists Support Deaf Employees in Personal Hygiene",
+      "date": "2026-10-13",
+      "summary": "Using clear visual checklists helps Deaf employees follow personal hygiene protocols and report illness reliably.",
+      "file": "posts/2026-10-13-visual-checklists-deaf-personal-hygiene.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "captioned-video-modules-allergen-safety",
       "title": "Captioned Video Modules for Allergen Safety Training",
       "date": "2026-10-11",

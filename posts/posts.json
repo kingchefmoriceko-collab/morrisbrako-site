@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "color-coded-cleaning-guides-mobility-disabilities",
+      "title": "Color Coded Cleaning Guides for Employees With Mobility Disabilities",
+      "date": "2026-10-15",
+      "summary": "Using color coded visual guides makes cleaning and sanitizing tasks accessible and reliable for employees with mobility disabilities.",
+      "file": "posts/2026-10-15-color-coded-cleaning-guides-mobility-disabilities.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "visual-checklists-deaf-personal-hygiene",
       "title": "Visual Checklists Support Deaf Employees in Personal Hygiene",
       "date": "2026-10-13",

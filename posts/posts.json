@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "tactile-thermometer-guides-blind-employees",
+      "title": "Tactile Thermometer Guides for Blind Employees",
+      "date": "2026-10-17",
+      "summary": "I argue that breaking temperature checks into tactile steps enables blind employees to perform food safety tasks reliably.",
+      "file": "posts/2026-10-17-tactile-thermometer-guides-blind-employees.md",
+      "image": "images/headers/temperature.svg",
+      "status": "published"
+    },
+    {
       "slug": "color-coded-cleaning-guides-mobility-disabilities",
       "title": "Color Coded Cleaning Guides for Employees With Mobility Disabilities",
       "date": "2026-10-15",

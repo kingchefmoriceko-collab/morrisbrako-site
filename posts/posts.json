@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "pictorial-checklists-mental-health-cleaning",
+      "title": "Pictorial Checklists Aid Employees With Mental Health Conditions In Cleaning Protocols",
+      "date": "2026-10-19",
+      "summary": "Visual checklists and color coding make cleaning and sanitizing tasks more accessible for employees with mental health conditions while improving overall kitchen safety.",
+      "file": "posts/2026-10-19-pictorial-checklists-mental-health-cleaning.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "tactile-thermometer-guides-blind-employees",
       "title": "Tactile Thermometer Guides for Blind Employees",
       "date": "2026-10-17",

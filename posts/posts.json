@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "plain-language-handwashing-guides-dyslexia",
+      "title": "Plain Language Handwashing Guides for Employees With Dyslexia",
+      "date": "2026-10-21",
+      "summary": "Using plain language and readable guides makes handwashing and glove use accessible for employees with dyslexia, improving compliance and safety.",
+      "file": "posts/2026-10-21-plain-language-handwashing-guides-dyslexia.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "pictorial-checklists-mental-health-cleaning",
       "title": "Pictorial Checklists Aid Employees With Mental Health Conditions In Cleaning Protocols",
       "date": "2026-10-19",

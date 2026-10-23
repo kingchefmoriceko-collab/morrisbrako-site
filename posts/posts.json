@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "tactile-allergen-guides-blind-kitchen-staff",
+      "title": "Tactile Allergen Guides for Blind Kitchen Staff",
+      "date": "2026-10-23",
+      "summary": "Using tactile labels and color coding makes allergen safety clear and achievable for blind employees.",
+      "file": "posts/2026-10-23-tactile-allergen-guides-blind-kitchen-staff.md",
+      "image": "images/headers/clarity.svg",
+      "status": "published"
+    },
+    {
       "slug": "plain-language-handwashing-guides-dyslexia",
       "title": "Plain Language Handwashing Guides for Employees With Dyslexia",
       "date": "2026-10-21",

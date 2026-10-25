@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "visual-allergen-guides-deaf-kitchen-staff",
+      "title": "Visual Allergen Guides for Deaf Kitchen Staff",
+      "date": "2026-10-25",
+      "summary": "Using clear visual guides and color coding helps Deaf employees master allergen safety and reduces cross-contact risk.",
+      "file": "posts/2026-10-25-visual-allergen-guides-deaf-kitchen-staff.md",
+      "image": "images/headers/clarity.svg",
+      "status": "published"
+    },
+    {
       "slug": "tactile-allergen-guides-blind-kitchen-staff",
       "title": "Tactile Allergen Guides for Blind Kitchen Staff",
       "date": "2026-10-23",

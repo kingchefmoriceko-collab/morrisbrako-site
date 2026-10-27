@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "stepwise-handwashing-mobility-disabilities",
+      "title": "Stepwise Handwashing For Employees With Mobility Disabilities",
+      "date": "2026-10-27",
+      "summary": "Breaking handwashing into clear, sequenced steps helps employees with mobility challenges maintain food safety standards.",
+      "file": "posts/2026-10-27-stepwise-handwashing-mobility-disabilities.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "visual-allergen-guides-deaf-kitchen-staff",
       "title": "Visual Allergen Guides for Deaf Kitchen Staff",
       "date": "2026-10-25",

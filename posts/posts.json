@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "stepwise-temperature-checks-memory-challenges",
+      "title": "Stepwise Temperature Checks for Employees With Memory Challenges",
+      "date": "2026-10-29",
+      "summary": "Breaking the thermometer task into clear steps and memory supports enables employees with memory challenges to maintain food safety standards.",
+      "file": "posts/2026-10-29-stepwise-temperature-checks-memory-challenges.md",
+      "image": "images/headers/temperature.svg",
+      "status": "published"
+    },
+    {
       "slug": "stepwise-handwashing-mobility-disabilities",
       "title": "Stepwise Handwashing For Employees With Mobility Disabilities",
       "date": "2026-10-27",

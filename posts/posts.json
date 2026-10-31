@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "visual-handwashing-guides-autistic-kitchen-employees",
+      "title": "Visual Handwashing Guides for Autistic Kitchen Employees",
+      "date": "2026-10-31",
+      "summary": "Using visual schedules and color-coded cues makes handwashing and glove use accessible for autistic staff while strengthening overall kitchen safety.",
+      "file": "posts/2026-10-31-visual-handwashing-guides-autistic-kitchen-employees.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "stepwise-temperature-checks-memory-challenges",
       "title": "Stepwise Temperature Checks for Employees With Memory Challenges",
       "date": "2026-10-29",

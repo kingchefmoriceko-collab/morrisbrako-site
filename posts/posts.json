@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "color-coded-thermometer-training-deaf-kitchen-staff",
+      "title": "Color Coded Thermometer Training for Deaf Kitchen Staff",
+      "date": "2026-11-03",
+      "summary": "Using visual color cues to teach temperature monitoring helps Deaf employees perform food safety checks accurately and confidently.",
+      "file": "posts/2026-11-03-color-coded-thermometer-training-deaf-kitchen-staff.md",
+      "image": "images/headers/temperature.svg",
+      "status": "published"
+    },
+    {
       "slug": "visual-handwashing-guides-autistic-kitchen-employees",
       "title": "Visual Handwashing Guides for Autistic Kitchen Employees",
       "date": "2026-10-31",

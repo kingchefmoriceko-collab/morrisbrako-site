@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "visual-prompt-cards-personal-hygiene-memory-challenges",
+      "title": "Visual Prompt Cards for Personal Hygiene with Employees Experiencing Memory Challenges",
+      "date": "2026-11-05",
+      "summary": "Using simple visual cue cards helps employees with memory challenges maintain personal hygiene and report illness consistently.",
+      "file": "posts/2026-11-05-visual-prompt-cards-personal-hygiene-memory-challenges.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "color-coded-thermometer-training-deaf-kitchen-staff",
       "title": "Color Coded Thermometer Training for Deaf Kitchen Staff",
       "date": "2026-11-03",

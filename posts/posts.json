@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "tactile-hygiene-checklists-blind-employees",
+      "title": "Tactile Hygiene Checklists for Blind Kitchen Employees",
+      "date": "2026-11-07",
+      "summary": "Tactile checklists provide blind kitchen staff with a reliable way to master personal hygiene and illness reporting, strengthening food safety for all.",
+      "file": "posts/2026-11-07-tactile-hygiene-checklists-blind-employees.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "visual-prompt-cards-personal-hygiene-memory-challenges",
       "title": "Visual Prompt Cards for Personal Hygiene with Employees Experiencing Memory Challenges",
       "date": "2026-11-05",

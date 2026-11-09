@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "audio-guided-thermometer-training-blind-staff",
+      "title": "Audio Guided Thermometer Training for Blind Kitchen Staff",
+      "date": "2026-11-09",
+      "summary": "Using audio guided step-by-step instructions for thermometer use enables blind kitchen employees to maintain temperature safety reliably.",
+      "file": "posts/2026-11-09-audio-guided-thermometer-training-blind-staff.md",
+      "image": "images/headers/temperature.svg",
+      "status": "published"
+    },
+    {
       "slug": "tactile-hygiene-checklists-blind-employees",
       "title": "Tactile Hygiene Checklists for Blind Kitchen Employees",
       "date": "2026-11-07",

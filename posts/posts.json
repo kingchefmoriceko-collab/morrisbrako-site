@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "task-analysis-autistic-employees-kitchen-cleaning",
+      "title": "Task Analysis for Autistic Employees in Kitchen Cleaning",
+      "date": "2026-11-13",
+      "summary": "Breaking cleaning procedures into clear, sequential steps helps autistic staff perform safely and consistently.",
+      "file": "posts/2026-11-13-task-analysis-autistic-employees-kitchen-cleaning.md",
+      "image": "images/headers/hygiene.svg",
+      "status": "published"
+    },
+    {
       "slug": "audio-guided-thermometer-training-blind-staff",
       "title": "Audio Guided Thermometer Training for Blind Kitchen Staff",
       "date": "2026-11-09",

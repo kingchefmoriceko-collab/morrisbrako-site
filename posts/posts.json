@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "video-modeling-temperature-control-intellectual-disabilities",
+      "title": "Video Modeling for Temperature Control with Employees With Intellectual Disabilities",
+      "date": "2026-11-15",
+      "summary": "Using captioned video modeling makes thermometer use and temperature monitoring accessible for employees with intellectual disabilities.",
+      "file": "posts/2026-11-15-video-modeling-temperature-control-intellectual-disabilities.md",
+      "image": "images/headers/clarity.svg",
+      "status": "published"
+    },
+    {
       "slug": "task-analysis-autistic-employees-kitchen-cleaning",
       "title": "Task Analysis for Autistic Employees in Kitchen Cleaning",
       "date": "2026-11-13",

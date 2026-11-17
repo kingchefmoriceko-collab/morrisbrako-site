@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "pictorial-checklists-allergen-awareness-dyslexia",
+      "title": "Pictorial Checklists for Allergen Awareness with Employees With Dyslexia",
+      "date": "2026-11-17",
+      "summary": "Using clear picture-based checklists helps employees with dyslexia reliably follow allergen safety steps.",
+      "file": "posts/2026-11-17-pictorial-checklists-allergen-awareness-dyslexia.md",
+      "image": "images/headers/clarity.svg",
+      "status": "published"
+    },
+    {
       "slug": "video-modeling-temperature-control-intellectual-disabilities",
       "title": "Video Modeling for Temperature Control with Employees With Intellectual Disabilities",
       "date": "2026-11-15",

@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "plain-language-hygiene-guidance-blind-staff",
+      "title": "Plain Language Hygiene Guidance for Blind Kitchen Staff",
+      "date": "2026-11-19",
+      "summary": "Clear, readable guidance makes personal hygiene and illness reporting accessible for blind employees and improves overall food safety.",
+      "file": "posts/2026-11-19-plain-language-hygiene-guidance-blind-staff.md",
+      "image": "images/headers/clarity.svg",
+      "status": "published"
+    },
+    {
       "slug": "pictorial-checklists-allergen-awareness-dyslexia",
       "title": "Pictorial Checklists for Allergen Awareness with Employees With Dyslexia",
       "date": "2026-11-17",

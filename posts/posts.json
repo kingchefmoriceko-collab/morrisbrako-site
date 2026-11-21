@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "visual-supports-allergen-awareness-mental-health",
+      "title": "Visual Supports for Allergen Awareness with Employees With Mental Health Conditions",
+      "date": "2026-11-21",
+      "summary": "Using clear visual tools helps employees with mental health conditions learn and apply allergen safety practices reliably.",
+      "file": "posts/2026-11-21-visual-supports-allergen-awareness-mental-health.md",
+      "image": "images/headers/clarity.svg",
+      "status": "published"
+    },
+    {
       "slug": "plain-language-hygiene-guidance-blind-staff",
       "title": "Plain Language Hygiene Guidance for Blind Kitchen Staff",
       "date": "2026-11-19",

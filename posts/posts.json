@@ -1,6 +1,15 @@
 {
   "posts": [
     {
+      "slug": "color-coded-temperature-checks-dyslexia",
+      "title": "Color Coded Temperature Checks for Employees With Dyslexia",
+      "date": "2026-11-27",
+      "summary": "Using color coding to simplify thermometer use makes temperature control accessible for employees with dyslexia.",
+      "file": "posts/2026-11-27-color-coded-temperature-checks-dyslexia.md",
+      "image": "images/headers/temperature.svg",
+      "status": "published"
+    },
+    {
       "slug": "captioned-video-modeling-cleaning-mobility-impairments",
       "title": "Captioned Video Modeling for Cleaning With Mobility Impairments",
       "date": "2026-11-25",
